@@ -7,7 +7,7 @@ public class GenerateObjectsInArea : MonoBehaviour {
 	public Transform startPosition;
 	public Transform endPosition;
 	public float length;
-	public string axis;
+	public int x, y, z = 0;
 	public GameObject[] prefabArray;
 
 	private List<Vector3> pointsArray;
@@ -19,17 +19,11 @@ public class GenerateObjectsInArea : MonoBehaviour {
 	{
 		pointsArray = new List<Vector3>();
 		distanceBetween += Vector3.Distance(startPosition.transform.position, endPosition.transform.position);
-
+		pointsArray.Add(startPosition);
+		
 		while (pointCounter < distanceBetween)
 		{
-			// TODO: There has to be a better way to determine which axis the point should generate to
-			// HINT: Vector3.Normalize ?
-			if (axis == "x")
-				point += new Vector3(length, 0, 0);
-			else if (axis == "y")
-				point += new Vector3(0, length, 0);
-			else if (axis == "z")
-				point += new Vector3(0, 0, length);
+			point += new Vector3(length * x, length * y, length * z);
 			pointsArray.Add(point);
 			pointCounter += length;
 		}
