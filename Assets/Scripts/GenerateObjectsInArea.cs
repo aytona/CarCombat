@@ -19,7 +19,7 @@ public class GenerateObjectsInArea : MonoBehaviour {
 	{
 		pointsArray = new List<Vector3>();
 		distanceBetween += Vector3.Distance(startPosition.transform.position, endPosition.transform.position);
-		pointsArray.Add(startPosition);
+		Instantiate(prefabArray[Random.Range(0, prefabArray.Length)], startPosition.transform.position, startPosition.transform.rotation);
 		
 		while (pointCounter < distanceBetween)
 		{
@@ -30,7 +30,7 @@ public class GenerateObjectsInArea : MonoBehaviour {
 
 		for (int i = 0; i < pointsArray.Count; i++)
 		{
-			Instantiate(prefabArray[Random.Range(0, prefabArray.Length)], (Vector3)pointsArray[i] + startPosition.position, startPosition.transform.rotation);
+			Instantiate(prefabArray[Random.Range(0, prefabArray.Length)], (Vector3)pointsArray[i] + startPosition.transform.position, startPosition.transform.rotation);
 		}
 	}
 }
