@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class GenerateObjectsInArea : MonoBehaviour {
+public class GenerateObjectsInLine : MonoBehaviour {
 
 	public Transform startPosition;
 	public Transform endPosition;
