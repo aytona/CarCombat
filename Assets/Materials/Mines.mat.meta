@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: d6711046221901f418187f5ee7bd77ee
-labels:
-- Terrain
-- Vegetation
-- Nature
-- Tree
+guid: f44b114684f130a41a54ae6f652e171c
+timeCreated: 1443707889
+licenseType: Free
 NativeFormatImporter:
   userData: 
   assetBundleName: 
