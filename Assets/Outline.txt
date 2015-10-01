@@ -1,0 +1,21 @@
+Car Combat Game Outline
+#######################
+
+--Turrets--
+Every cube object under the 'TurretPlaceHolders' objects are the turrets.
+They are already positioned at the approx. location that I want them at.
+I will be replaced the mesh with an actual turret mesh in the future.
+Also will be adding other special objects surrounding each individual turrets (ex. barriers).
+
+--Hazards--
+Every hazard is under the 'Hazards' object, except for the radiation river (located under 'Ground' object, as Ground 6)
+Mines - will explode when a player touches them.
+Electricity - 2 Poles parallel to each other that generate an electricity particle that the player can't pass through and will hurt them on impact.
+FlameThrower - 2 Poles parallel to each other that generate a flame particle that player can pass through but will hurt them while on it.
+Radiation River - The river that cuts through the map is a river of radiation. If the player goes on the river, he will receive damage over time while being on the river.
+
+--Notes--
+The big cube at the end of the course is a boss.
+Play the game to spawn most of the props in the game.
+I implemented a basic movement control on the player for now, will definitely improve on it in future milestones.
+Player doesn't have enough speed to make it to the next half of the course, that is because I will be putting a booster at the tip of the ramp to give players enough speed to make it through.
