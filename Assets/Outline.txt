@@ -24,3 +24,9 @@ The big cube at the end of the course is a boss.
 Play the game to spawn most of the props in the game.
 I implemented a basic movement control on the player for now, will definitely improve on it in future milestones.
 Player doesn't have enough speed to make it to the next half of the course, that is because I will be putting a booster at the tip of the ramp to give players enough speed to make it through.
+
+--Player--
+The player will have a chain gun as a default weapon.
+This gun can be aimed using the mouse.
+Another weapon that the player can pickup is a homing missile.
+This is an auto-target weapon that targets the closest enemy in the weapon radius. (Used to kill the turret up in the mountains)
