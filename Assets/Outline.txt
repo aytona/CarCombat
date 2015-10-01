@@ -14,7 +14,12 @@ Electricity - 2 Poles parallel to each other that generate an electricity partic
 FlameThrower - 2 Poles parallel to each other that generate a flame particle that player can pass through but will hurt them while on it.
 Radiation River - The river that cuts through the map is a river of radiation. If the player goes on the river, he will receive damage over time while being on the river.
 
+--Borders--
+The mountains should keep the player inside the level.
+Because I only have a primative car controller, the player can climb the mountains currently(they shouldn't in the future).
+
 --Notes--
+Let the light bake. On mine it takes a while to bake the light, which makes the level very dark(I only intended to make it slightly dark).
 The big cube at the end of the course is a boss.
 Play the game to spawn most of the props in the game.
 I implemented a basic movement control on the player for now, will definitely improve on it in future milestones.
