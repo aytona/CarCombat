@@ -2,10 +2,9 @@ Car Combat Game Outline
 #######################
 
 --Turrets--
-Every cube object under the 'TurretPlaceHolders' objects are the turrets.
+Every turret object under the 'Turrets' objects are the turrets.
 They are already positioned at the approx. location that I want them at.
-I will be replaced the mesh with an actual turret mesh in the future.
-Also will be adding other special objects surrounding each individual turrets (ex. barriers).
+I will be adding other special objects surrounding each individual turrets (ex. barriers).
 
 --Hazards--
 Every hazard is under the 'Hazards' object, except for the radiation river (located under 'Ground' object, as Ground 6)
