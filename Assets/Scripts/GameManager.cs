@@ -3,9 +3,9 @@ using System.Collections;
 
 public class GameManager : Singleton<GameManager> {
 
-	public float InvulnDelay;
-
+	private float InvulnDelay = 3f;
 	private float timeRemaining;
+    private float maxTime = 5 * 60;
 	private int playerHealth;
 	private int turretsRemaining;
 	private int maxHealth = 10;
@@ -61,19 +61,25 @@ public class GameManager : Singleton<GameManager> {
 	private void Restart()
 	{
 		Application.LoadLevel(Application.loadedLevel);
-		TimeRemaining = 60 * 5;
+		TimeRemaining = maxTime;
 		PlayerHealth = maxHealth;
 	}
 
 	void OnEnable()
 	{
-
+        
 	}
 
 	void OnDisable()
 	{
 
 	}
+
+    void Start()
+    {
+        TimeRemaining = maxTime;
+        PlayerHealth = maxHealth;
+    }
 
 	void Update()
 	{

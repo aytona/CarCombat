@@ -2,17 +2,23 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class UI : MonoBehaviour {
+public class UI : Singleton<UI> {
 
     public Text Timer;
     public Text TurretCounter;
     public Text PlayerHealth;
 
+    void Awake()
+    {
+        GameObject[] turrets = GameObject.FindGameObjectsWithTag("Turret");
+        GameManager.Instance.TurretsRemaining = turrets.Length;
+    }
+
     void Update()
     {
         Timer.text = FormatTime(GameManager.Instance.TimeRemaining);
-        TurretCounter.text = GameManager.Instance.TurretsRemaining.ToString();
-        PlayerHealth.text = GameManager.Instance.PlayerHealth.ToString();
+        TurretCounter.text = "Turrets: " + GameManager.Instance.TurretsRemaining.ToString();
+        PlayerHealth.text = "Health: " + GameManager.Instance.PlayerHealth.ToString();
     }
 
     private string FormatTime(float timeinSeconds)
