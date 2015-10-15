@@ -8,8 +8,10 @@ public class UI : Singleton<UI> {
     public Text TurretCounter;
     public Text PlayerHealth;
     public Text Mute;
+    public Text Saved;
 
     private GameObject PauseMenu;
+    private GameObject SaveButton;
     private bool paused;
     private bool muted;
 
@@ -19,6 +21,7 @@ public class UI : Singleton<UI> {
         GameManager.Instance.TurretsRemaining = turrets.Length;
         paused = false;
         PauseMenu = GameObject.Find("PauseMenu");
+        SaveButton = GameObject.Find("Save");
     }
 
     void Update()
@@ -50,6 +53,8 @@ public class UI : Singleton<UI> {
         {
             PauseMenu.SetActive(false);
             Time.timeScale = 1;
+            Saved.text = "Save";
+            SaveButton.GetComponent<Button>().interactable = true;
         }
     }
 
@@ -77,7 +82,8 @@ public class UI : Singleton<UI> {
     public void Save()
     {
         PlayerPrefs.SetInt("CurrentSceneSave", Application.loadedLevel);
-
+        Saved.text = "Saved";
+        SaveButton.GetComponent<Button>().interactable = false;
     }
 
     public void Load()
