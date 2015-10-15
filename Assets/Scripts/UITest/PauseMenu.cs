@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour {
     private bool muted;
 
     [SerializeField]
-    private Text muteText;
+    private Text muteText = null;
 
 	// Use this for initialization
 	void Start () {

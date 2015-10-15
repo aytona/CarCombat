@@ -8,7 +8,7 @@ public class UI : Singleton<UI> {
     public Text TurretCounter;
     public Text PlayerHealth;
 
-    void Awake()
+    void Start()
     {
         GameObject[] turrets = GameObject.FindGameObjectsWithTag("Turret");
         GameManager.Instance.TurretsRemaining = turrets.Length;
