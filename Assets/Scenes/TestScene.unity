@@ -9882,6 +9882,7 @@ MonoBehaviour:
   PlayerHealth: {fileID: 1130892070}
   Mute: {fileID: 1554628354}
   Saved: {fileID: 64993818}
+  Loaded: {fileID: 71356316}
 --- !u!1001 &977658311
 Prefab:
   m_ObjectHideFlags: 0

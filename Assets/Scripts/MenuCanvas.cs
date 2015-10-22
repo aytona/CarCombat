@@ -9,22 +9,18 @@ public class MenuCanvas : MonoBehaviour {
     public GameObject MainMenu;
     public GameObject Continue;
 
-    private bool hasSave;
-
     void Start()
     {
-        hasSave = false;
         if (PlayerPrefs.GetInt("CurrentSceneSave") != 0)
-            hasSave = true;
-        if (hasSave)
+            GameManager.Instance.HasSave = true;
+        if (GameManager.Instance.HasSave)
             Continue.SetActive(true);
     }
 
     void Update()
     {
-        if (hasSave)
+        if (GameManager.Instance.HasSave)
             StartText.text = "Start New Game";
-
     }
 
     // Button functions

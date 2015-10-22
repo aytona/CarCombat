@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager> {
 	private int turretsRemaining;
 	private int maxHealth = 10;
 	private bool isInvulnerable = false;
+    private bool hasSave = false;
 
 	public float TimeRemaining
 	{
@@ -46,6 +47,18 @@ public class GameManager : Singleton<GameManager> {
 			playerHealth = value;
 		}
 	}
+
+    public bool HasSave
+    {
+        get
+        {
+            return hasSave;
+        }
+        set
+        {
+            hasSave = value;
+        }
+    }
 
 	private void DecrementPlayerHealth(GameObject player)
 	{

@@ -9,6 +9,7 @@ public class UI : Singleton<UI> {
     public Text PlayerHealth;
     public Text Mute;
     public Text Saved;
+    public Text Loaded;
 
     private GameObject PauseMenu;
     private GameObject SaveButton;
@@ -24,6 +25,11 @@ public class UI : Singleton<UI> {
         PauseMenu = GameObject.Find("PauseMenu");
         SaveButton = GameObject.Find("Save");
         LoadButton = GameObject.Find("Load");
+        if (!GameManager.Instance.HasSave)
+        {
+            LoadButton.GetComponent<Button>().interactable = false;
+            Loaded.text = "No Saved Scene";
+        }
     }
 
     void Update()
@@ -50,10 +56,6 @@ public class UI : Singleton<UI> {
         {
             PauseMenu.SetActive(true);
             Time.timeScale = 0;
-            if (PlayerPrefs.GetInt("CurrentSaveScene") == 0)
-                LoadButton.GetComponent<Button>().interactable = false;
-            else if (PlayerPrefs.GetInt("CurrentSaveScene") != 0)
-                LoadButton.GetComponent<Button>().interactable = true;
         }
         else if(!paused)
         {
@@ -90,11 +92,14 @@ public class UI : Singleton<UI> {
         PlayerPrefs.SetInt("CurrentSceneSave", Application.loadedLevel);
         Saved.text = "Saved";
         SaveButton.GetComponent<Button>().interactable = false;
+        LoadButton.GetComponent<Button>().interactable = true;
+        Loaded.text = "Load";
+        GameManager.Instance.HasSave = true;
     }
 
     public void Load()
     {
-        Application.LoadLevel(PlayerPrefs.GetInt("CurrentSceneSave"));
+        Application.LoadLevel(PlayerPrefs.GetInt("CurrentSaveScene"));
     }
 
     private string FormatTime(float timeinSeconds)
