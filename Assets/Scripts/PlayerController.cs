@@ -9,13 +9,13 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey("up"))
             transform.Translate(Vector3.down * speed * Time.deltaTime);
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey("down"))
             transform.Translate(Vector3.up * speed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey("left"))
             transform.Rotate(0, 0, -angle * Time.deltaTime);
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey("right"))
             transform.Rotate(0, 0, angle * Time.deltaTime);
         if (speed < maxSpeed && (Input.GetKey(KeyCode.UpArrow) || (Input.GetKey(KeyCode.DownArrow))))
             speed++;

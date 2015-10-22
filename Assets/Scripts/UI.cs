@@ -12,6 +12,7 @@ public class UI : Singleton<UI> {
 
     private GameObject PauseMenu;
     private GameObject SaveButton;
+    private GameObject LoadButton;
     private bool paused;
     private bool muted;
 
@@ -22,6 +23,7 @@ public class UI : Singleton<UI> {
         paused = false;
         PauseMenu = GameObject.Find("PauseMenu");
         SaveButton = GameObject.Find("Save");
+        LoadButton = GameObject.Find("Load");
     }
 
     void Update()
@@ -48,6 +50,10 @@ public class UI : Singleton<UI> {
         {
             PauseMenu.SetActive(true);
             Time.timeScale = 0;
+            if (PlayerPrefs.GetInt("CurrentSaveScene") == 0)
+                LoadButton.GetComponent<Button>().interactable = false;
+            else if (PlayerPrefs.GetInt("CurrentSaveScene") != 0)
+                LoadButton.GetComponent<Button>().interactable = true;
         }
         else if(!paused)
         {

@@ -30,6 +30,7 @@ public class MenuCanvas : MonoBehaviour {
     // Button functions
     public void doStart()
     {
+        PlayerPrefs.SetInt("CurrentSceneSave", 0);
         Application.LoadLevel(1);
     }
 

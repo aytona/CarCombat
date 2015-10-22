@@ -65,16 +65,6 @@ public class GameManager : Singleton<GameManager> {
 		PlayerHealth = maxHealth;
 	}
 
-	void OnEnable()
-	{
-        
-	}
-
-	void OnDisable()
-	{
-
-	}
-
     void Start()
     {
         TimeRemaining = maxTime;
