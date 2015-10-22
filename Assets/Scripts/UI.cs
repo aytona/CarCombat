@@ -95,4 +95,11 @@ public class UI : Singleton<UI> {
     {
         return string.Format("{0}:{1:00}", Mathf.FloorToInt(timeinSeconds / 60), Mathf.FloorToInt(timeinSeconds % 60));
     }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if (level == 0)
+            Destroy(this.gameObject);
+    }
+
 }
