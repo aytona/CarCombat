@@ -3,28 +3,14 @@ using System.Collections;
 
 public class Unflip : MonoBehaviour {
 
-    private Quaternion initialRotation;
-    private bool onGround;
-    void Start()
-    {
-        initialRotation = transform.rotation;
-    }
+    public GameObject player;
 
-    void FixedUpdate()
-    {
-        if (transform.rotation.z >= 180 && transform.rotation.z < 360 && onGround)
-            transform.rotation = initialRotation;
-    }
-
-    void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.tag == "Ground")
-            onGround = true;
-    }
-
-    void OnCollisionExit(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Ground")
-            onGround = false;
+        {
+            player.transform.rotation = Quaternion.identity;
+            player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
     }
 }
