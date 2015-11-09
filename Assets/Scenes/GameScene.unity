@@ -195,6 +195,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: .299999952
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e7ae0ee47c688445b36ef6c77932709, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e7ae0ee47c688445b36ef6c77932709, type: 2}
   m_IsPrefabParent: 0
@@ -8998,6 +9002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8457a9176376a654a9588bd3d636fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &849260568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17664,6 +17669,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1684197425}
+  - 114: {fileID: 1684197426}
   m_Layer: 0
   m_Name: CameraRig
   m_TagString: Untagged
@@ -17684,6 +17690,28 @@ Transform:
   - {fileID: 762469986}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1684197426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1684197424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21385020b3fd704b969860ad28e39f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Target: {fileID: 1113660489}
+  _AutoTargetPlayer: 1
+  _UpdateType: 0
+  _MoveSpeed: 3
+  _TurnSpeed: 1
+  _RollSpeed: .200000003
+  _SpinTurnLimit: 90
+  _TargetVelocityLowerLimit: 4
+  _SmoothTurnTime: .200000003
+  _FollowVelocity: 0
+  _FollowTilt: 1
 --- !u!1 &1686011769
 GameObject:
   m_ObjectHideFlags: 0
