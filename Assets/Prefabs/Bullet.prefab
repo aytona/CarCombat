@@ -12,6 +12,7 @@ GameObject:
   - 135: {fileID: 13548690}
   - 23: {fileID: 2362526}
   - 114: {fileID: 11406388}
+  - 54: {fileID: 5422062}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -62,6 +63,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102254}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &5422062
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102254}
+  serializedVersion: 2
+  m_Mass: .100000001
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &11406388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,8 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1738d9461b0b95447a3f5589ac20f170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: .100000001
-  lifeSpan: 10
 --- !u!135 &13548690
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -100,6 +114,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: force
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
       value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
