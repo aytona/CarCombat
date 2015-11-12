@@ -7,7 +7,7 @@ public class RotateGun : MonoBehaviour {
 
 	void Update ()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
             transform.Rotate(Vector3.up, rotateSpeed * 360 * Time.deltaTime);
 	}
 }

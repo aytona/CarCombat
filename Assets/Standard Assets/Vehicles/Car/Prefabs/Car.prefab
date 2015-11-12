@@ -533,6 +533,7 @@ GameObject:
   - 4: {fileID: 459714}
   - 33: {fileID: 3336434}
   - 23: {fileID: 2351448}
+  - 114: {fileID: 11424522}
   m_Layer: 0
   m_Name: Gun6
   m_TagString: Untagged
@@ -550,8 +551,39 @@ GameObject:
   - 4: {fileID: 414748}
   - 33: {fileID: 3358032}
   - 23: {fileID: 2333190}
+  - 114: {fileID: 11429840}
   m_Layer: 0
   m_Name: Gun6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &154464
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 448650}
+  m_Layer: 0
+  m_Name: BulletSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &165058
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 424658}
+  m_Layer: 0
+  m_Name: BulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1017,9 +1049,22 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.38499999, y: -.529999971, z: -.039999716}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 424658}
   m_Father: {fileID: 427542}
   m_RootOrder: 1
+--- !u!4 &424658
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.349999994, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414748}
+  m_RootOrder: 0
 --- !u!4 &427542
 Transform:
   m_ObjectHideFlags: 1
@@ -1034,6 +1079,18 @@ Transform:
   - {fileID: 414748}
   m_Father: {fileID: 409526}
   m_RootOrder: 0
+--- !u!4 &448650
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154464}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -.349999994, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459714}
+  m_RootOrder: 0
 --- !u!4 &459714
 Transform:
   m_ObjectHideFlags: 1
@@ -1043,7 +1100,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .38499999, y: -.529999971, z: -.0400000177}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 448650}
   m_Father: {fileID: 427542}
   m_RootOrder: 0
 --- !u!23 &2300000
@@ -2205,7 +2263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20fa55eb64c5cea4aa3c71ae19c434bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  engineSoundStyle: 1
+  engineSoundStyle: 0
   lowAccelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
   lowDecelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
   highAccelClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
@@ -2217,6 +2275,28 @@ MonoBehaviour:
   maxRolloffDistance: 500
   dopplerLevel: 1
   useDoppler: 1
+--- !u!114 &11424522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1e75c06f5982a4eba538c86f394e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11429840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1e75c06f5982a4eba538c86f394e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11431794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2228,6 +2308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def4db048bd5cab4b8c8e9dd69a5e7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner1: {fileID: 0}
+  spawner2: {fileID: 0}
+  bullet: {fileID: 0}
   mouseSensitivity: 3
   xLimit: 20
   yLimit: 15
