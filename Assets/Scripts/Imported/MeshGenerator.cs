@@ -5,10 +5,6 @@
 using System;
 using UnityEngine;
 
-#if !UNITY_WEBPLAYER
-using UnityEditor;
-#endif
-
 public class MeshGenerator : MonoBehaviour
 {
     public int dimension;       // squared dimension of the generated mesh
@@ -98,14 +94,6 @@ public class MeshGenerator : MonoBehaviour
             MakeTerrain();
         }
 
-#if !UNITY_WEBPLAYER
-        // check if we're saving this mesh
-        if (saveMesh)
-        {
-            AssetDatabase.CreateAsset(mesh, "Assets/Models/generatedMesh.prefab");
-            AssetDatabase.SaveAssets();
-        }
-#endif
     }
 
     /// <summary>

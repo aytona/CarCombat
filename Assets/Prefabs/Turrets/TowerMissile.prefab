@@ -12,6 +12,8 @@ GameObject:
   - 114: {fileID: 11429772}
   - 114: {fileID: 11401306}
   - 114: {fileID: 11404238}
+  - 114: {fileID: 11452620}
+  - 114: {fileID: 11441338}
   m_Layer: 0
   m_Name: TurretTrigger
   m_TagString: Untagged
@@ -134,8 +136,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153044}
-  m_LocalRotation: {x: -.000269759999, y: .945778489, z: -.0432481878, w: -.321920156}
-  m_LocalPosition: {x: 39.1399994, y: 7.32999992, z: 35.5299988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -36.7299995, y: 3.86999989, z: 40.5400009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 448834}
@@ -173,8 +175,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143962}
-  m_LocalRotation: {x: -.66258508, y: .247365043, z: .209749654, w: .675127208}
-  m_LocalPosition: {x: 0, y: .646244049, z: -0}
+  m_LocalRotation: {x: -.158954963, y: .679617345, z: .704218268, w: .130116642}
+  m_LocalPosition: {x: 0, y: .646244049, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 484126}
@@ -356,6 +358,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookAt: {fileID: 0}
   idle: {fileID: 0}
+  attack: {fileID: 0}
+  pulse: {fileID: 0}
+  isMissile: 1
 --- !u!114 &11429772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,6 +373,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .100000001
+--- !u!114 &11441338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103802}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02172182144624445a672dab70d1a787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rateOfFire: 2
+  lifeSpan: 2.5
+  particleEffect: {fileID: 100010, guid: 4d0391f078db24fac9f5cba3075f9f5d, type: 2}
+--- !u!114 &11452620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9283759d5d62624faff6fe8b5dd2c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rateOfFire: 3
+  lifeSpan: 5
+  projectileSpawner: {fileID: 400432}
+  bullet: {fileID: 181802, guid: 2918184c960668d4e9b978e6911e34fd, type: 2}
 --- !u!135 &13569342
 SphereCollider:
   m_ObjectHideFlags: 1
