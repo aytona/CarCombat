@@ -13,8 +13,8 @@ public class SmoothFollow : MonoBehaviour {
     {
         Vector3 followPosition;
         followPosition = target.TransformPoint(0, height, -distance);
-        transform.position = Vector3.Lerp(transform.position, followPosition, Time.deltaTime * damping);
+        transform.position = Vector3.Lerp(transform.position, followPosition, Time.fixedDeltaTime * damping);
         Quaternion followRotation = Quaternion.LookRotation(target.position - transform.position, target.up);
-        transform.rotation = Quaternion.Slerp(transform.rotation, followRotation, Time.deltaTime * rotationDamping);
+        transform.rotation = Quaternion.Slerp(transform.rotation, followRotation, Time.fixedDeltaTime * rotationDamping);
     }
 }
