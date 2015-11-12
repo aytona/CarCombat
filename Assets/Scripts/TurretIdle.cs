@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TurretIdle : MonoBehaviour {
+public class TurretIdle : MonoBehaviour
+{
 
     [SerializeField]
     private float speed = 0.1f;
@@ -10,4 +11,5 @@ public class TurretIdle : MonoBehaviour {
     {
         transform.Rotate(transform.up, speed * 360 * Time.deltaTime);
     }
+
 }

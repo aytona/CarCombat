@@ -34,6 +34,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &142474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 460412}
+  - 135: {fileID: 13519980}
+  - 114: {fileID: 11448024}
+  - 114: {fileID: 11424844}
+  - 114: {fileID: 11443918}
+  m_Layer: 0
+  m_Name: TurretTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &147330
 GameObject:
   m_ObjectHideFlags: 1
@@ -77,14 +96,14 @@ GameObject:
   - 4: {fileID: 433834}
   m_Layer: 0
   m_Name: TowerPulseLaser
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &184510
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -118,14 +137,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184510}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: .68626982, z: 0}
+  m_LocalPosition: {x: 0, y: .68626976, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 416772}
   - {fileID: 493174}
   - {fileID: 432590}
-  m_Father: {fileID: 433834}
-  m_RootOrder: 1
+  m_Father: {fileID: 460412}
+  m_RootOrder: 0
 --- !u!4 &432590
 Transform:
   m_ObjectHideFlags: 1
@@ -144,12 +163,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157056}
-  m_LocalRotation: {x: 0, y: -.462036282, z: 0, w: .886861086}
-  m_LocalPosition: {x: -18.5233593, y: .899999976, z: -8.65999985}
+  m_LocalRotation: {x: 0, y: -.907826304, z: 0, w: .419346541}
+  m_LocalPosition: {x: -18.5233593, y: .939999998, z: 2.04077888}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 459062}
-  - {fileID: 422268}
+  - {fileID: 460412}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &459062
@@ -164,6 +183,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 433834}
   m_RootOrder: 0
+--- !u!4 &460412
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 422268}
+  m_Father: {fileID: 433834}
+  m_RootOrder: 1
 --- !u!4 &493174
 Transform:
   m_ObjectHideFlags: 1
@@ -332,6 +364,55 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11424844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142474}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8285c7c8df41e65408de6e4197fb2edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+--- !u!114 &11443918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abdd68abe2cb51b45b55854e01fcb3ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAt: {fileID: 0}
+  idle: {fileID: 0}
+--- !u!114 &11448024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d568f7e905a2f47b54991738520f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: .100000001
+--- !u!135 &13519980
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142474}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
