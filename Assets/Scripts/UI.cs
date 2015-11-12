@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using System.Collections;
+
 
 public class UI : Singleton<UI> {
 
@@ -11,6 +13,7 @@ public class UI : Singleton<UI> {
     public Text Saved;
     public Text Loaded;
 
+    private SoundManager soundManager;
     private GameObject PauseMenu;
     private GameObject SaveButton;
     private GameObject LoadButton;
@@ -23,6 +26,7 @@ public class UI : Singleton<UI> {
         GameObject[] turrets = GameObject.FindGameObjectsWithTag("Turret");
         GameManager.Instance.TurretsRemaining = turrets.Length;
         paused = false;
+        soundManager = FindObjectOfType<SoundManager>();
         PauseMenu = GameObject.Find("PauseMenu");
         SaveButton = GameObject.Find("Save");
         LoadButton = GameObject.Find("Load");
@@ -73,26 +77,31 @@ public class UI : Singleton<UI> {
     public void Resume()
     {
         paused = false;
+        soundManager.PlayClickClip();
     }
 
     public void MainMenu()
     {
         Application.LoadLevel(0);
+        soundManager.PlayClickClip();
     }
 
     public void Muted()
     {
         muted = !muted;
+        soundManager.PlayClickClip();
     }
 
     public void Quit()
     {
         Application.Quit();
+        soundManager.PlayClickClip();
     }
 
     public void Unstuck()
     {
         Player.transform.position = new Vector3(0f, -0.45f, 0f);
+        soundManager.PlayClickClip();
     }
 
     // Save Game Test
@@ -104,11 +113,13 @@ public class UI : Singleton<UI> {
         LoadButton.GetComponent<Button>().interactable = true;
         Loaded.text = "Load";
         GameManager.Instance.HasSave = true;
+        soundManager.PlayClickClip();
     }
 
     public void Load()
     {
         Application.LoadLevel(PlayerPrefs.GetInt("CurrentSaveScene"));
+        soundManager.PlayClickClip();
     }
 
     private string FormatTime(float timeinSeconds)
