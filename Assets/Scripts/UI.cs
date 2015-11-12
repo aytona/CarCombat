@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
 
-
 public class UI : Singleton<UI> {
 
     public Text Timer;
