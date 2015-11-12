@@ -18,6 +18,8 @@ public class GunController : MonoBehaviour {
         float xRotation = Input.GetAxisRaw("Mouse X");
         float yRotation = Input.GetAxisRaw("Mouse Y");
         PerformRotation(xRotation, yRotation);
+
+
     }
 
     private void PerformRotation(float xInput, float yInput)
