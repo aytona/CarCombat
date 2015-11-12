@@ -14,6 +14,7 @@ public class UI : Singleton<UI> {
     private GameObject PauseMenu;
     private GameObject SaveButton;
     private GameObject LoadButton;
+    private GameObject Player;
     private bool paused;
     private bool muted;
 
@@ -25,6 +26,7 @@ public class UI : Singleton<UI> {
         PauseMenu = GameObject.Find("PauseMenu");
         SaveButton = GameObject.Find("Save");
         LoadButton = GameObject.Find("Load");
+        Player = GameObject.Find("Player");
         if (!GameManager.Instance.HasSave)
         {
             LoadButton.GetComponent<Button>().interactable = false;
@@ -56,6 +58,7 @@ public class UI : Singleton<UI> {
         {
             PauseMenu.SetActive(true);
             Time.timeScale = 0;
+            Cursor.visible = true;
         }
         else if(!paused)
         {
@@ -63,6 +66,7 @@ public class UI : Singleton<UI> {
             Time.timeScale = 1;
             Saved.text = "Save";
             SaveButton.GetComponent<Button>().interactable = true;
+            Cursor.visible = false;
         }
     }
 
@@ -84,6 +88,11 @@ public class UI : Singleton<UI> {
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Unstuck()
+    {
+        Player.transform.position = new Vector3(0f, -0.45f, 0f);
     }
 
     // Save Game Test
