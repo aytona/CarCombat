@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   m_Layer: 0
   m_Name: Helpers
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +25,7 @@ GameObject:
   - 4: {fileID: 400002}
   m_Layer: 0
   m_Name: Particles
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   - 4: {fileID: 400004}
   m_Layer: 0
   m_Name: Lights
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ GameObject:
   - 4: {fileID: 400006}
   m_Layer: 0
   m_Name: WheelsHubs
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ GameObject:
   - 23: {fileID: 2300002}
   m_Layer: 0
   m_Name: SkyCarComponents
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - 23: {fileID: 2300018}
   m_Layer: 0
   m_Name: ColliderFront
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   - 23: {fileID: 2300026}
   m_Layer: 0
   m_Name: ColliderBody
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ GameObject:
   - 23: {fileID: 2300000}
   m_Layer: 0
   m_Name: SkyCarBody
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,7 +143,7 @@ GameObject:
   - 23: {fileID: 2300030}
   m_Layer: 0
   m_Name: ColliderBottom
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,7 +160,7 @@ GameObject:
   - 23: {fileID: 2300016}
   m_Layer: 0
   m_Name: SkyCarSuspensionFrontRight
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,7 @@ GameObject:
   - 23: {fileID: 2300006}
   m_Layer: 0
   m_Name: SkyCarSuspensionFrontLeft
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: SkyCarMudGuardFrontRight
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,7 +212,7 @@ GameObject:
   - 108: {fileID: 10800000}
   m_Layer: 0
   m_Name: HeadlighRightSpot
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,7 +228,7 @@ GameObject:
   - 108: {fileID: 10800002}
   m_Layer: 0
   m_Name: HeadlightLeftSpot
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +245,7 @@ GameObject:
   - 199: {fileID: 19900000}
   m_Layer: 0
   m_Name: ParticleBurnoutSmoke
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,7 +260,7 @@ GameObject:
   - 4: {fileID: 400038}
   m_Layer: 0
   m_Name: Colliders
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,7 +278,7 @@ GameObject:
   - 114: {fileID: 11400014}
   m_Layer: 0
   m_Name: WheelHubRearLeft
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,7 +296,7 @@ GameObject:
   - 114: {fileID: 11400016}
   m_Layer: 0
   m_Name: WheelHubRearRight
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,7 +314,7 @@ GameObject:
   - 114: {fileID: 11400018}
   m_Layer: 0
   m_Name: WheelHubFrontLeft
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -332,7 +332,7 @@ GameObject:
   - 114: {fileID: 11400020}
   m_Layer: 0
   m_Name: WheelHubFrontRight
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,7 +351,7 @@ GameObject:
   - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: SkyCarMudGuardFrontLeft
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,6 +369,7 @@ GameObject:
   - 114: {fileID: 11400022}
   - 114: {fileID: 11400024}
   - 114: {fileID: 11461010}
+  - 65: {fileID: 6529754}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -388,7 +389,7 @@ GameObject:
   - 23: {fileID: 2300012}
   m_Layer: 0
   m_Name: SkyCarWheelRearRight
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,7 +406,7 @@ GameObject:
   - 23: {fileID: 2300020}
   m_Layer: 0
   m_Name: SkyCarWheelRearLeft
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -422,7 +423,7 @@ GameObject:
   - 23: {fileID: 2300024}
   m_Layer: 0
   m_Name: SkyCarWheelFrontRight
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -439,7 +440,7 @@ GameObject:
   - 23: {fileID: 2300014}
   m_Layer: 0
   m_Name: SkyCarWheelFrontLeft
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -456,7 +457,7 @@ GameObject:
   - 23: {fileID: 2300008}
   m_Layer: 0
   m_Name: SkyCarHeadLightsGlow
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -474,7 +475,7 @@ GameObject:
   - 114: {fileID: 11400010}
   m_Layer: 0
   m_Name: SkyCarBrakeLightsGlow
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -489,7 +490,7 @@ GameObject:
   - 4: {fileID: 400056}
   m_Layer: 0
   m_Name: SkyCar
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -504,7 +505,7 @@ GameObject:
   - 4: {fileID: 400062}
   m_Layer: 0
   m_Name: WaypointTargetObject
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -519,7 +520,7 @@ GameObject:
   - 4: {fileID: 400064}
   m_Layer: 0
   m_Name: CameraFocusPoint
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,7 +538,7 @@ GameObject:
   - 114: {fileID: 11424522}
   m_Layer: 0
   m_Name: Gun6
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -555,7 +556,7 @@ GameObject:
   - 114: {fileID: 11429840}
   m_Layer: 0
   m_Name: Gun6
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -570,7 +571,7 @@ GameObject:
   - 4: {fileID: 448650}
   m_Layer: 0
   m_Name: BulletSpawner
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -585,7 +586,7 @@ GameObject:
   - 4: {fileID: 424658}
   m_Layer: 0
   m_Name: BulletSpawner
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -602,7 +603,7 @@ GameObject:
   - 23: {fileID: 2315402}
   m_Layer: 0
   m_Name: 1M Black Car
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -620,7 +621,7 @@ GameObject:
   - 114: {fileID: 11431794}
   m_Layer: 0
   m_Name: TurretD2Sub
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1746,6 +1747,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6529754
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.24269986, y: 2.16779923, z: 4.96944666}
+  m_Center: {x: -.0506420843, y: 1.11272025, z: -.214469776}
 --- !u!82 &8200010
 AudioSource:
   m_ObjectHideFlags: 1
