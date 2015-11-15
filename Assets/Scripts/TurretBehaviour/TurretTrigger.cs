@@ -5,6 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(TurretIdle))]
 [RequireComponent(typeof(TurretAttack))]
 [RequireComponent(typeof(TurretPulse))]
+[RequireComponent(typeof(TurretDeath))]
 public class TurretTrigger : MonoBehaviour {
 
     [SerializeField]
@@ -15,8 +16,11 @@ public class TurretTrigger : MonoBehaviour {
     private TurretAttack attack;
     [SerializeField]
     private TurretPulse pulse;
+    [SerializeField]
+    private TurretDeath death;
 
     public bool isMissile;
+    public bool isSupport;
 
     void Start()
     {
@@ -24,6 +28,7 @@ public class TurretTrigger : MonoBehaviour {
         idle = GetComponent<TurretIdle>();
         attack = GetComponent<TurretAttack>();
         pulse = GetComponent<TurretPulse>();
+        death = GetComponent<TurretDeath>();
     }
 
 	void OnTriggerEnter(Collider other)
@@ -38,6 +43,10 @@ public class TurretTrigger : MonoBehaviour {
             }
             else if (!isMissile)
                 pulse.enabled = true;
+        }
+        if (other.tag == "Bullet")
+        {
+
         }
     }
 

@@ -77,6 +77,7 @@ GameObject:
   - 114: {fileID: 11400368}
   - 114: {fileID: 11416096}
   - 114: {fileID: 11435050}
+  - 114: {fileID: 11469646}
   m_Layer: 0
   m_Name: TurretTrigger
   m_TagString: Untagged
@@ -167,8 +168,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134886}
-  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 31.5090008, y: 1.54700005, z: 15.4700003}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: 31.5090008, y: 1.54700005, z: 4.51999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 477312}
@@ -436,6 +437,21 @@ MonoBehaviour:
   rateOfFire: 2
   lifeSpan: 2.5
   particleEffect: {fileID: 100010, guid: 4d0391f078db24fac9f5cba3075f9f5d, type: 2}
+--- !u!114 &11469646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143122}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9283759d5d62624faff6fe8b5dd2c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rateOfFire: 3
+  lifeSpan: 5
+  projectileSpawner: {fileID: 0}
+  bullet: {fileID: 0}
 --- !u!114 &11483614
 MonoBehaviour:
   m_ObjectHideFlags: 1
