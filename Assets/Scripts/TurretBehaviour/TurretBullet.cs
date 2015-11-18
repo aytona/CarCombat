@@ -4,7 +4,7 @@ using System.Collections;
 public class TurretBullet : MonoBehaviour {
 
     [SerializeField]
-    private float speed = 2f;
+    private float speed = 10f;
 
     private Vector3 player = Vector3.zero;
 
