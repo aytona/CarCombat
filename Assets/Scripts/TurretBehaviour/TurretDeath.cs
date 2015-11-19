@@ -9,13 +9,21 @@ public class TurretDeath : MonoBehaviour {
     private GameObject explosion;
     [SerializeField]
     private GameObject objectAfterDeath;
-
-    private float length;
+    [SerializeField]
     private TurretSupportTrigger support;
+
+    public float length;
+
+    private bool supportToggle;
+    
 
 	void Start()
     {
-        support = GetComponent<TurretSupportTrigger>();
+        if (isSupport)
+        {
+            support = GetComponent<TurretSupportTrigger>();
+            supportToggle = support.enabled;
+        }
         StartCoroutine(DeathAnim(length));
     }
 
@@ -24,6 +32,6 @@ public class TurretDeath : MonoBehaviour {
         Instantiate(explosion, Vector3.zero, Quaternion.identity);
         yield return new WaitForSeconds(delay);
         if (isSupport)
-            support.enabled = true;
+            support.enabled = !supportToggle;
     }
 }

@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(TurretLookAt))]
 [RequireComponent(typeof(TurretIdle))]
 [RequireComponent(typeof(TurretAttack))]
 [RequireComponent(typeof(TurretPulse))]
@@ -20,7 +19,6 @@ public class TurretTrigger : MonoBehaviour {
     private TurretDeath death;
 
     public bool isMissile;
-    public bool isSupport;
 
     void Start()
     {
@@ -46,7 +44,7 @@ public class TurretTrigger : MonoBehaviour {
         }
         if (other.tag == "Bullet")
         {
-
+            death.enabled = true;
         }
     }
 
