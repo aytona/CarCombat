@@ -14517,6 +14517,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2036565270}
+  - 114: {fileID: 2036565271}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Untagged
@@ -14540,6 +14541,24 @@ Transform:
   - {fileID: 204534197}
   m_Father: {fileID: 1906803604}
   m_RootOrder: 2
+--- !u!114 &2036565271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036565269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa283b0f45c345b41abacf6ec5121636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barriers:
+  - {fileID: 925372426}
+  - {fileID: 883989997}
+  - {fileID: 228927483}
+  - {fileID: 204534196}
+  speed: .100000001
+  barrierCooldDown: 3
 --- !u!4 &2046606295 stripped
 Transform:
   m_PrefabParentObject: {fileID: 439320, guid: cb2e95717da26a344b4e9fa03e229279, type: 2}
