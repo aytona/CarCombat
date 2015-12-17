@@ -11,6 +11,8 @@ public class TurretAttack : MonoBehaviour {
     private Transform projectileSpawner = null;
     [SerializeField]
     private GameObject bullet = null;
+    [SerializeField]
+    private float bulletSpeed = 10f;
 
     private TurretBullet bulletScript;
 
@@ -22,6 +24,7 @@ public class TurretAttack : MonoBehaviour {
     private void Shoot()
     {
         GameObject bulletAttack = Instantiate(bullet, projectileSpawner.position, Quaternion.identity) as GameObject;
+        bullet.GetComponent<Rigidbody>().velocity = bulletSpeed * projectileSpawner.forward;
         bulletScript = bulletAttack.GetComponent<TurretBullet>();
         Vector3 _player = GameObject.FindGameObjectWithTag("Player").transform.position;
         bulletScript.Move(_player);

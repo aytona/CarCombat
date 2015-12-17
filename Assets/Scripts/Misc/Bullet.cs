@@ -13,14 +13,19 @@ public class Bullet : MonoBehaviour {
         Destroy(gameObject, lifeSpan);
     }
 
-    void Update()
-    {
-        transform.position += transform.forward * speed * Time.deltaTime;
-    }
+    //void Update()
+    //{
+    //    transform.position += transform.forward * speed * Time.deltaTime;
+    //}
 
     void OnTriggerEnter(Collider other)
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+
+    //private IEnumerator LifeSpanCoroutine()
+    //{
+    //    yield return WaitForSeconds(3);
+    //}
 }
