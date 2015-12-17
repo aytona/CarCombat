@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Turret
   - Ground
+  - Explosion
   layers:
   - Default
   - TransparentFX

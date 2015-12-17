@@ -370,6 +370,7 @@ GameObject:
   - 114: {fileID: 11400024}
   - 114: {fileID: 11461010}
   - 65: {fileID: 6529754}
+  - 114: {fileID: 11445358}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -2328,6 +2329,18 @@ MonoBehaviour:
   mouseSensitivity: 3
   xLimit: 20
   yLimit: 15
+--- !u!114 &11445358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86151c9ca27ee346b04ab324b66727e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 100002, guid: 80e627d9677f54c60aa5791b32e88841, type: 2}
 --- !u!114 &11461010
 MonoBehaviour:
   m_ObjectHideFlags: 1

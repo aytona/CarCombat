@@ -117,6 +117,8 @@ public class GameManager : Singleton<GameManager> {
             playerDead();
         if (turretsRemaining <= 0)
             playerWin();
+        if (player == null)
+            playerDead();
 	}
 
     void OnLevelLoaded(int level)
