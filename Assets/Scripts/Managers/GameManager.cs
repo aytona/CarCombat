@@ -11,6 +11,8 @@ public class GameManager : Singleton<GameManager> {
 	private int maxHealth = 10;
 	private bool isInvulnerable = false;
     private bool hasSave = false;
+    private bool winCondition;
+    private bool loseCondition;
 
 	public float TimeRemaining
 	{
