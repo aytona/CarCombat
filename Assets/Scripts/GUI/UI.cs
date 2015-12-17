@@ -11,6 +11,8 @@ public class UI : Singleton<UI> {
     public Text Mute;
     public Text Saved;
     public Text Loaded;
+    public GameObject WinObject;
+    public GameObject LoseObject;
 
     private SoundManager soundManager;
     private GameObject PauseMenu;
@@ -39,12 +41,17 @@ public class UI : Singleton<UI> {
 
     void Update()
     {
-        Timer.text = FormatTime(GameManager.Instance.TimeRemaining);
+        if (GameManager.Instance.TimeRemaining > 0)
+            Timer.text = FormatTime(GameManager.Instance.TimeRemaining);
         TurretCounter.text = "Turrets: " + GameManager.Instance.TurretsRemaining.ToString();
         PlayerHealth.text = "Health: " + GameManager.Instance.PlayerHealth.ToString();
 
         if (Input.GetKeyDown(KeyCode.Escape))
+        {
             paused = !paused;
+            WinObject.SetActive(false);
+            LoseObject.SetActive(false);
+        }
         
         if (muted)
         {
@@ -60,6 +67,7 @@ public class UI : Singleton<UI> {
         if (paused)
         {
             PauseMenu.SetActive(true);
+            
             Time.timeScale = 0;
             Cursor.visible = true;
         }
@@ -70,6 +78,16 @@ public class UI : Singleton<UI> {
             Saved.text = "Save";
             SaveButton.GetComponent<Button>().interactable = true;
             Cursor.visible = false;
+        }
+
+        if (GameManager.Instance.WinCondition)
+        {
+            WinObject.SetActive(true);
+        }
+
+        else if (GameManager.Instance.LoseCondition)
+        {
+            LoseObject.SetActive(true);
         }
     }
 

@@ -5,6 +5,8 @@ public class TurretBullet : MonoBehaviour {
 
     [SerializeField]
     private float speed = 10f;
+    [SerializeField]
+    private GameObject explosion;
 
     private Vector3 player = Vector3.zero;
 

@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager> {
     private bool hasSave = false;
     private bool winCondition;
     private bool loseCondition;
+    private GameObject player;
 
 	public float TimeRemaining
 	{
@@ -62,6 +63,18 @@ public class GameManager : Singleton<GameManager> {
         }
     }
 
+    public bool WinCondition
+    {
+        get { return winCondition; }
+        set { winCondition = value; }
+    }
+
+    public bool LoseCondition
+    {
+        get { return loseCondition; }
+        set { loseCondition = value; }
+    }
+
 	private void DecrementPlayerHealth(GameObject player)
 	{
 		if (isInvulnerable)
@@ -69,30 +82,51 @@ public class GameManager : Singleton<GameManager> {
 		StartCoroutine(InvulnerableDelay(InvulnDelay));
 		PlayerHealth--;
 		// TODO: Destroy player when health runs out
-		if (PlayerHealth <= 0)
-			Restart();
+        if (PlayerHealth <= 0)
+            playerDead();
 	}
 
-	private void Restart()
-	{
-		Application.LoadLevel(Application.loadedLevel);
-		TimeRemaining = maxTime;
-		PlayerHealth = maxHealth;
-	}
+    //private void Restart()
+    //{
+    //    TimeRemaining = maxTime;
+    //    PlayerHealth = maxHealth;
+    //}
+
+    private void playerDead()
+    {
+        loseCondition = true;
+        Destroy(player);
+    }
+
+    private void playerWin()
+    {
+        winCondition = true;
+    }
 
     void Start()
     {
         TimeRemaining = maxTime;
         PlayerHealth = maxHealth;
+        player = GameObject.Find("Player");
     }
 
 	void Update()
 	{
 		TimeRemaining -= Time.deltaTime;
-		// TODO: Destroy player when time runs out
-		if (TimeRemaining <= 0)
-			Restart();
+        if (TimeRemaining <= 0)
+            playerDead();
+        if (turretsRemaining <= 0)
+            playerWin();
 	}
+
+    void OnLevelLoaded(int level)
+    {
+        if (level == 0)
+        {
+            loseCondition = false;
+            winCondition = false;
+        }
+    }
 	
 	private IEnumerator InvulnerableDelay(float InvulnDelay)
 	{

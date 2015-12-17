@@ -13,9 +13,9 @@ public class TurretDeath : MonoBehaviour {
     private TurretSupportTrigger support;
 
     public float length;
+    public bool isDead;
 
     private bool supportToggle;
-    
 
 	void Start()
     {
@@ -25,6 +25,12 @@ public class TurretDeath : MonoBehaviour {
             supportToggle = support.enabled;
         }
         StartCoroutine(DeathAnim(length));
+        isDead = true;
+    }
+
+    public bool IsDead()
+    {
+        return isDead;
     }
 
     private IEnumerator DeathAnim(float delay)
