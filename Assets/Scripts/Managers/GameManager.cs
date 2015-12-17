@@ -81,7 +81,6 @@ public class GameManager : Singleton<GameManager> {
 			return;
 		StartCoroutine(InvulnerableDelay(InvulnDelay));
 		PlayerHealth--;
-		// TODO: Destroy player when health runs out
         if (PlayerHealth <= 0)
             playerDead();
 	}
@@ -115,10 +114,10 @@ public class GameManager : Singleton<GameManager> {
 		TimeRemaining -= Time.deltaTime;
         if (TimeRemaining <= 0)
             playerDead();
-        if (turretsRemaining <= 0)
-            playerWin();
-        if (player == null)
-            playerDead();
+        //if (turretsRemaining <= 0)
+        //    playerWin();
+        //if (player == null)
+        //    playerDead();
 	}
 
     void OnLevelLoaded(int level)

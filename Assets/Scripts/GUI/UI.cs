@@ -37,6 +37,8 @@ public class UI : Singleton<UI> {
             LoadButton.GetComponent<Button>().interactable = false;
             Loaded.text = "No Saved Scene";
         }
+        //WinObject.SetActive(false);
+        //LoseObject.SetActive(false);
     }
 
     void Update()
@@ -49,8 +51,8 @@ public class UI : Singleton<UI> {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             paused = !paused;
-            WinObject.SetActive(false);
-            LoseObject.SetActive(false);
+            //WinObject.SetActive(false);
+            //LoseObject.SetActive(false);
         }
         
         if (muted)
@@ -78,6 +80,11 @@ public class UI : Singleton<UI> {
             Saved.text = "Save";
             SaveButton.GetComponent<Button>().interactable = true;
             Cursor.visible = false;
+        }
+
+        if (Player == null)
+        {
+            LoseObject.SetActive(true);
         }
 
         if (GameManager.Instance.WinCondition)
