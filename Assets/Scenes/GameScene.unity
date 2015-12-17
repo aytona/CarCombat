@@ -2022,6 +2022,7 @@ GameObject:
   - 92: {fileID: 270054957}
   - 81: {fileID: 270054956}
   - 114: {fileID: 270054960}
+  - 114: {fileID: 270054961}
   m_Layer: 0
   m_Name: CarCamera
   m_TagString: MainCamera
@@ -2036,7 +2037,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 270054954}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -2, y: .5, z: 0}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1676849202}
@@ -2112,10 +2113,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 176719679}
-  distance: 6
-  height: 5
-  damping: 2
+  distance: 10
+  height: 3
+  damping: 10
   rotationDamping: 10
+--- !u!114 &270054961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 270054954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5262052d493ce9c478eb6b5d4917a760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reticleImage: {fileID: 2800000, guid: b879262a9dab5734bb8d6650557ff599, type: 3}
 --- !u!1001 &270968123
 Prefab:
   m_ObjectHideFlags: 0
